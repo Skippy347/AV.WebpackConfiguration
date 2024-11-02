@@ -6,5 +6,11 @@ export function buildLoaders(): webpack.RuleSetRule[] {
     use: "ts-loader",
     exclude: /node_modules/,
   };
-  return [typescriptLoader];
+
+  const cssLoader = {
+    test: /\.s[ac]ss$/i,
+    use: ["style-loader", "css-loader", "sass-loader"],
+  };
+
+  return [typescriptLoader, cssLoader];
 }

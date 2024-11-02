@@ -32,4 +32,5 @@ export default [
     ignores: ["node_modules", "build"],
   },
   ...typescriptEslint.configs.recommended,
+  
 ];

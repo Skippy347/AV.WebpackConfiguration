@@ -2,7 +2,6 @@
   "name": "webpack-configuration",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "eslint:fix": "eslint --fix .",
     "prettier:write": "prettier --write .",

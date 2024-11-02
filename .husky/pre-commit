@@ -1,2 +1,2 @@
-npm run eslint:fix
 npm run prettier:write
+npm run eslint:fix

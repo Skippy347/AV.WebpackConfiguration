@@ -31,5 +31,15 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
-  return [typescriptLoader, cssLoader];
+  const svgrLoader = {
+    test: /\.svg$/,
+    use: ["@svgr/webpack"],
+  };
+
+  const assetModulesLoader = {
+    test: /\.(png|jpe?g|ico)$/,
+    type: "asset/resource",
+  };
+
+  return [typescriptLoader, cssLoader, svgrLoader, assetModulesLoader];
 }

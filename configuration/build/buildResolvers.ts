@@ -8,10 +8,10 @@ export function buildResolvers(options: BuildOptions): webpack.ResolveOptions {
   return {
     extensions: [".tsx", ".ts", ".js"],
     preferAbsolute: true,
-    modules: [options.paths.src, "node_modules"],
+    modules: [options.paths.srcFolder, "node_modules"],
     mainFiles: ["index"],
     alias: {
-      "@": paths.src,
+      "@": paths.srcFolder,
     },
   };
 }

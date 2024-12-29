@@ -1,0 +1,15 @@
+import { BuildOptions } from "./types/configuration";
+
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import webpack from "webpack";
+
+export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstance[] {
+  const { paths } = options;
+
+  return [
+    new HtmlWebpackPlugin({
+      template: paths.html,
+    }),
+    new webpack.ProgressPlugin(),
+  ];
+}

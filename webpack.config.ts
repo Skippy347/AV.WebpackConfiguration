@@ -10,6 +10,7 @@ export default (env: BuildEnvironmentVariables) => {
     html: path.resolve(__dirname, "public", "index.html"),
     entry: path.resolve(__dirname, "src", "index.tsx"),
     publicFolder: path.resolve(__dirname, "public"),
+    srcFolder: path.resolve(__dirname, "src"),
   };
 
   const MODE = env.mode || "development";

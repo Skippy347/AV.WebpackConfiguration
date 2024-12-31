@@ -6,6 +6,7 @@ export interface BuildPaths {
   entry: string;
 
   publicFolder: string;
+  srcFolder: string;
 }
 
 export interface BuildEnvironmentVariables {

@@ -4,6 +4,8 @@ export interface BuildPaths {
   build: string;
   html: string;
   entry: string;
+
+  publicFolder: string;
 }
 
 export interface BuildEnvironmentVariables {

@@ -1,6 +1,7 @@
 import { BuildOptions } from "./types/configuration";
 
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import webpack from "webpack";
 
 export function buildLoaders(options: BuildOptions) {
   const { isDevelopment } = options;
@@ -30,5 +31,13 @@ export function buildLoaders(options: BuildOptions) {
     exclude: /node_modules/,
   };
 
-  return [typescriptLoader, cssLoader];
+  const imageLoader: webpack.RuleSetRule = {
+    test: /\.(ico)$/i,
+    type: "asset/resource",
+    generator: {
+      filename: "images/[name].[hash:8][ext]",
+    },
+  };
+
+  return [typescriptLoader, cssLoader, imageLoader];
 }
